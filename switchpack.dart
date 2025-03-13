@@ -1,9 +1,9 @@
-class switchpack{
-	String checkcolor(String c){
-		return switch(c){
-			'red' || 'Red'||'RED' => "Apples are in Red color",
-			'green' || 'Green'||'GREEN' => "Guavas are in Green color",
-			_=>"Wrong Color",
-		};
-	}
+import 'package:switchpack/switchpack.dart';
+
+import 'dart:io';
+void main(List<String> arguments) {
+	switchpack sp =  switchpack();
+	print("Enter color");
+	String color =stdin.readLineSync()!;
+	print(sp.checkcolor(color));
 }
